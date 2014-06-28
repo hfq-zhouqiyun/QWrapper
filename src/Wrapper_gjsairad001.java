@@ -1,4 +1,3 @@
-package myjob;
 import com.qunar.qfwrapper.bean.booking.BookingResult;
 import com.qunar.qfwrapper.bean.booking.BookingInfo;
 import com.qunar.qfwrapper.bean.search.FlightSearchParam;

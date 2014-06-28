@@ -90,7 +90,7 @@ public class Wrapper_gjsairad001 implements QunarCrawler{
 		BookingResult bookingResult = new BookingResult();
 		
 		String[] depStr = arg0.getDepDate().split("-");
-		String[] arrStr = arg0.getRetDate().split("-");
+		String[] arrStr = arg0.getArr().split("-");
 		
 		BookingInfo bookingInfo = new BookingInfo();
 		bookingInfo.setAction(bookingUrlPre);
@@ -178,16 +178,7 @@ public class Wrapper_gjsairad001 implements QunarCrawler{
 			get.addRequestHeader("Cookie",cookie);
 		    
 		    get.setFollowRedirects(false);
-		    
-		       try {
-		            int statusCode = httpClient.executeMethod(get);
-		            
-//		            System.err.println(get.getResponseBodyAsString());
-		       } catch (Exception e) {
-		            System.out.println(e.getMessage() + "   asdasdasdad");
-		       }
-//		    get.releaseConnection();
-		    
+		    httpClient.executeMethod(get);
 		    return get.getResponseBodyAsString();
 
 		} catch (Exception e) {			
@@ -230,47 +221,6 @@ public class Wrapper_gjsairad001 implements QunarCrawler{
 		}
 		
 		try {
-			/*List<RoundTripFlightInfo> flightList = new ArrayList<RoundTripFlightInfo>();
-			RoundTripFlightInfo baseFlight = new RoundTripFlightInfo();
-			List<FlightSegement> segs = new ArrayList<FlightSegement>();
-			FlightDetail flightDetail = new FlightDetail();
-			FlightSegement seg = new FlightSegement();
-			List<String> flightNoList = new ArrayList<String>();	
-				
-			tempStr = jsonStr[0];
-			flight = StringUtils.substringBetween(tempStr, "<div class=\"flight\"></div>", "</div>");
-			leavTime = StringUtils.substringBetween(tempStr, "<div class=\"output\"><span>", "</span></div>");
-			landTime = StringUtils.substringBetween(tempStr, "<div class=\"arrival\"><span>", "</span></div>");
-			tmpPrice = StringUtils.substringBetween(tempStr, "<span class=\"farePrice\">", "</span>");
-			taxPrice = StringUtils.substringBetween(tempStr, "boardingTaxes=\"", "\"");
-					
-			String flightNo = flight.replaceAll("[^a-zA-Z\\d]", "");
-			flightNoList.add(flightNo);
-			seg.setFlightno(flightNo);
-			seg.setDepDate(arg1.getDepDate());
-			seg.setDepairport(arg1.getDep());
-			seg.setArrairport(arg1.getArr());
-			seg.setDeptime(leavTime);
-			seg.setArrtime(landTime);
-				
-			double tax = Double.parseDouble(taxPrice);
-			double price = Double.parseDouble(tmpPrice);
-			flightDetail.setDepdate(stringToDate(arg1.getDepDate()));
-			flightDetail.setFlightno(flightNoList);
-			flightDetail.setMonetaryunit(unit);
-			flightDetail.setPrice(price);
-			flightDetail.setTax(tax);
-			flightDetail.setDepcity(arg1.getDep());
-			flightDetail.setArrcity(arg1.getArr());
-			flightDetail.setWrapperid(arg1.getWrapperid());
-			segs.add(seg);
-			baseFlight.setDetail(flightDetail);
-			baseFlight.setInfo(segs);
-			flightList.add(baseFlight);
-			result.setRet(true);
-			result.setStatus(Constants.SUCCESS);
-			result.setData(flightList);*/
-			
 			return parser(html, param);
 		} catch(Exception e){
 			result.setRet(false);
@@ -304,31 +254,6 @@ public class Wrapper_gjsairad001 implements QunarCrawler{
 			List<String> flightNoRetList = new ArrayList<String>();
 			
 			FlightDetail flightDetail = new FlightDetail();
-			
-				//货币 EUR
-				String Icon = "USD";
-				/*String flightN = "";
-				String leavTime = "";
-				String landTime = "";
-				String go_price = "";
-				String gotaxPrice = "";
-				String retaxPrice = "";
-				
-				flightN = StringUtils.substringBetween(outF, "<div class=\"flight\"></div>", "</div>");
-				leavTime = StringUtils.substringBetween(outF, "<div class=\"output\"><span>", "</span></div>");
-				landTime = StringUtils.substringBetween(outF, "<div class=\"arrival\"><span>", "</span></div>");
-				go_price = StringUtils.substringBetween(outF, "<span class=\"farePrice\">", "</span>");
-				gotaxPrice = StringUtils.substringBetween(outF, "boardingTaxes=\"", "\"");
-						
-				String flightNo = flightN.replaceAll("[^a-zA-Z\\d]", "");
-				
-				FlightSegement seg = new FlightSegement(flightNo);
-				seg.setDeptime(leavTime);
-				seg.setArrtime(landTime);
-				
-				segs.add(seg);
-				flightNoList.add(flightNo);*/
-				
 				
 				String flightN = StringUtils.substringBetween(outF, "<div class=\"SegmentParam\" style=\"display:none\"><span>", "</span></div>");
 				String leavTime = StringUtils.substringBetween(outF, "<div class=\"output\"><span>", "</span></div>");
@@ -345,6 +270,7 @@ public class Wrapper_gjsairad001 implements QunarCrawler{
 						seg.setArrtime(landTime);
 						
 						seg.setDepDate(param.getDepDate());
+						seg.setArrDate(param.getRetDate());
 						seg.setDepairport(param.getDep());
 						seg.setArrairport(param.getArr());
 						
@@ -371,6 +297,7 @@ public class Wrapper_gjsairad001 implements QunarCrawler{
 								reseg.setArrtime(relandTime);
 								
 								reseg.setDepDate(param.getDepDate());
+								reseg.setArrDate(param.getRetDate());
 								reseg.setDepairport(param.getDep());
 								reseg.setArrairport(param.getArr());
 								

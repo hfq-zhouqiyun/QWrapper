@@ -90,7 +90,7 @@ public class Wrapper_gjsairad001 implements QunarCrawler{
 		BookingResult bookingResult = new BookingResult();
 		
 		String[] depStr = arg0.getDepDate().split("-");
-		String[] arrStr = arg0.getArr().split("-");
+		String[] arrStr = arg0.getRetDate().split("-");
 		
 		BookingInfo bookingInfo = new BookingInfo();
 		bookingInfo.setAction(bookingUrlPre);

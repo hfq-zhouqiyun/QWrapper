@@ -35,9 +35,7 @@ import java.util.List;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class Wrapper_gjdairad001 implements QunarCrawler{
-	private Logger logger = LoggerFactory.getLogger(Wrapper_gjdairbe001.class);
-	
+public class Wrapper_gjdairad001 implements QunarCrawler{	
 	private static final NameValuePair __EVENTTARGET = new NameValuePair("__EVENTTARGET","ControlGroupSearchView2$LinkButtonSubmit");
 	private static final NameValuePair _authkey_ = new NameValuePair("_authkey_","null");
 	private static final NameValuePair ControlGroupSearchView2$AvailabilitySearchInputSearchView2$CheckBoxUseMacDestination1 = new NameValuePair("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$CheckBoxUseMacDestination1","");
@@ -169,7 +167,7 @@ public class Wrapper_gjdairad001 implements QunarCrawler{
 		    return get.getResponseBodyAsString();
 
 		} catch (Exception e) {			
-			logger.error(e.getMessage(), e);
+			e.printStackTrace();
 		} finally{
 			if (null != get){
 				get.releaseConnection();

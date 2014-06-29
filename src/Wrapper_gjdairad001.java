@@ -225,6 +225,7 @@ public class Wrapper_gjdairad001 implements QunarCrawler{
 						seg.setArrtime(landTime);
 						
 						seg.setDepDate(arg1.getDepDate());
+						seg.setArrDate(arg1.getDepDate());
 						seg.setDepairport(arg1.getDep());
 						seg.setArrairport(arg1.getArr());
 						

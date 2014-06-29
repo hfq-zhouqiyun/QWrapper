@@ -184,17 +184,13 @@ public class Wrapper_gjdairad001 implements QunarCrawler{
 	public ProcessResultInfo process(String arg0, FlightSearchParam arg1) {
 		String html = arg0;
 		
-		/* ProcessResultInfo中，
-		 * ret为true时，status可以为：SUCCESS(抓取到机票价格)|NO_RESULT(无结果，没有可卖的机票)
-		 * ret为false时，status可以为:CONNECTION_FAIL|INVALID_DATE|INVALID_AIRLINE|PARSING_FAIL|PARAM_ERROR
-		 */
 		ProcessResultInfo result = new ProcessResultInfo();
 		if ("Exception".equals(html)) {	
 			result.setRet(false);
 			result.setStatus(Constants.CONNECTION_FAIL);
 			return result;			
 		}		
-		//需要有明显的提示语句，才能判断是否INVALID_DATE|INVALID_AIRLINE|NO_RESULT
+
 		if (html.contains("Today Flight is full, select an other day or check later for any seat released. ")) {
 			result.setRet(false);
 			result.setStatus(Constants.INVALID_DATE);

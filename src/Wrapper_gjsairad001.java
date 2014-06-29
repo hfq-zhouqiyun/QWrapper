@@ -99,8 +99,8 @@ public class Wrapper_gjsairad001 implements QunarCrawler{
 		
 		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$DropDownListMarketDay1",depStr[2]);
 		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$DropDownListMarketMonth1",depStr[0] + "-" + depStr[1]);
-		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$DropDownListMarketDay1",arrStr[2]);
-		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$DropDownListMarketMonth1",arrStr[0] + "-" + arrStr[1]);
+		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$DropDownListMarketDay2",arrStr[2]);
+		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$DropDownListMarketMonth2",arrStr[0] + "-" + arrStr[1]);
 		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$TextBoxMarketDestination1",arg0.getDep());
 		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$TextBoxMarketOrigin1",arg0.getArr());
 		
@@ -111,7 +111,7 @@ public class Wrapper_gjsairad001 implements QunarCrawler{
 		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$DropDownListPassengerType_ADT","1");
 		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$DropDownListPassengerType_CHD","0");
 		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$DropDownListPassengerType_INFANT","0");
-		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$RadioButtonMarketStructure","OneWay");
+		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$RadioButtonMarketStructure","RoundTrip");
 		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$TextBoxPromoCode","CALLCENT");
 		map.put("culture","en-US");
 		map.put("WebStore","false");

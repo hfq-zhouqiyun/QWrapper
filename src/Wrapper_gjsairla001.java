@@ -104,8 +104,6 @@ public class Wrapper_gjsairla001 implements QunarCrawler{
 		map.put("no_tarifas_promocionales","1");
 		map.put("mas_barato_owflex_ida","1");
 		map.put("mas_barato_owflex_ida_farebasis","HEEFXZ0K-LA");
-		map.put("fecha2_dia","");
-		map.put("fecha2_anomes","");
 		map.put("mas_barato_owflex_vuelta","");
 		map.put("mas_barato_owflex_vuelta_farebasis","YEEFFZ0K-LA");
 		

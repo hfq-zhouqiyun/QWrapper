@@ -74,7 +74,7 @@ public class Wrapper_gjsairla001 implements QunarCrawler{
 	
 	public BookingResult getBookingInfo(FlightSearchParam arg0) {
 
-		String bookingUrlPre = "http://booking.lan.com/cgi-bin/compra/paso2.cgi";
+		String bookingUrlPre = "http://booking.lan.com/cgi-bin/compra/paso2.cgi?url_promo=&reserva=&otras_ciudades=&num_segmentos_interfaz=2&from_city1=%s&to_city1=%s&from_city2=%s&to_city2=%s&nadults=1&nchildren=0&ninfants=0&tipo_paso2=flex&flex=0&no_tarifas_promocionales=1&fecha1_dia=%s&fecha1_anomes=%s&fecha2_dia=%s&fecha2_anomes=%s&mas_barato_owflex_ida=1&mas_barato_owflex_vuelta=2&mas_barato_owflex_ida_farebasis=NEESPD6K-LA&mas_barato_owflex_vuelta_farebasis=YEEFFZ0K-LA";
 		BookingResult bookingResult = new BookingResult();
 		
 		String[] depStr = arg0.getDepDate().split("-");
@@ -82,7 +82,7 @@ public class Wrapper_gjsairla001 implements QunarCrawler{
 		
 		BookingInfo bookingInfo = new BookingInfo();
 		bookingInfo.setAction(bookingUrlPre);
-		bookingInfo.setMethod("post");
+		bookingInfo.setMethod("get");
 		Map<String, String> map = new LinkedHashMap<String, String>();
 		
 		map.put("from_city1",arg0.getDep());

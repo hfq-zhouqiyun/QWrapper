@@ -68,7 +68,7 @@ public class Wrapper_gjdairla001 implements QunarCrawler{
 	
 	public BookingResult getBookingInfo(FlightSearchParam arg0) {
 
-		String bookingUrlPre = "http://booking.lan.com/cgi-bin/compra/paso2.cgi";
+		String bookingUrlPre = "http://booking.lan.com/cgi-bin/compra/paso2.cgi?url_promo=&reserva=&otras_ciudades=&num_segmentos_interfaz=1&from_city1=%s&to_city1=%s&nadults=1&nchildren=0&ninfants=0&tipo_paso2=flex&flex=0&no_tarifas_promocionales=1&fecha1_dia=%s&fecha1_anomes=%s&fecha2_dia=&fecha2_anomes=&mas_barato_owflex_ida=1&mas_barato_owflex_vuelta=&mas_barato_owflex_ida_farebasis=HEEFXZ0K-LA&mas_barato_owflex_vuelta_farebasis=";
 		BookingResult bookingResult = new BookingResult();
 		
 		String[] dateStr = arg0.getDepDate().split("-");

@@ -75,7 +75,7 @@ public class Wrapper_gjdairla001 implements QunarCrawler{
 		
 		BookingInfo bookingInfo = new BookingInfo();
 		bookingInfo.setAction(bookingUrlPre);
-		bookingInfo.setMethod("post");
+		bookingInfo.setMethod("get");
 		Map<String, String> map = new LinkedHashMap<String, String>();
 		
 		map.put("from_city1",arg0.getDep());

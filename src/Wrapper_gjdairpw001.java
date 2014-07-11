@@ -229,8 +229,7 @@ public class Wrapper_gjdairpw001 implements QunarCrawler{
 				String flight = StringUtils.substringBetween(Str[j], "[1] = '", "';");
 				
 				leavTime = StringUtils.substringBetween(Str[j], "[7] = '", "';");
-				landTime = StringUtils.substringBetween(Str[1], "[9] = '", "';");
-				landTime = StringUtils.substringBetween(Str[1], "[9] = '", "';");
+				landTime = StringUtils.substringBetween(Str[j], "[9] = '", "';");
 				
 				String flightNo = flight.replaceAll("[^a-zA-Z\\d]", "");
 				FlightSegement seg = new FlightSegement(flightNo);

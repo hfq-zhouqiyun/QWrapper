@@ -118,6 +118,16 @@ public class Wrapper_gjsairpw001 implements QunarCrawler{
 		mapParam.put("HAH","Moroni");
 		mapParam.put("MYW","Mtwara");
 		mapParam.put("MWZ","Mwanza");
+		mapParam.put("NBO","Nairobi");
+		mapParam.put("APL","Nampula");
+		mapParam.put("POL","Pemba");
+		mapParam.put("TKQ","Kigoma");
+		mapParam.put("FBM","Lubumbashi");
+		mapParam.put("LUN","Lusaka");
+		mapParam.put("SHY","Shinyanga");
+		mapParam.put("TBO","Tabora");
+		mapParam.put("MUZ","Musoma");
+		mapParam.put("ZNZ","Zanzibar");
 		
 		String strParam = "R ^LF_NEW ^" + arg0.getDep() + " ^" + mapParam.get(arg0.getDep()) + " ^" + arg0.getArr() + " ^" + mapParam.get(arg0.getArr()) + " ^" + depStr[2] + " ^" + depStr[1] + "/" + depStr[0] + " ^" + arrStr[2] + " ^" + arrStr[1] + "/" + arrStr[0] +" ^1 ^0 ^0 ^Y ^NC ^false ^ ^Economy Class ^Non-Stop and Connecting ^BKG ^TZ ^false ^";
 		map.put("hdnMode","BKG-LA");
@@ -165,6 +175,16 @@ public class Wrapper_gjsairpw001 implements QunarCrawler{
 			mapParam.put("HAH","Moroni");
 			mapParam.put("MYW","Mtwara");
 			mapParam.put("MWZ","Mwanza");
+			mapParam.put("NBO","Nairobi");
+			mapParam.put("APL","Nampula");
+			mapParam.put("POL","Pemba");
+			mapParam.put("TKQ","Kigoma");
+			mapParam.put("FBM","Lubumbashi");
+			mapParam.put("LUN","Lusaka");
+			mapParam.put("SHY","Shinyanga");
+			mapParam.put("TBO","Tabora");
+			mapParam.put("MUZ","Musoma");
+			mapParam.put("ZNZ","Zanzibar");
 			
 			String strParam = "R ^LF_NEW ^" + arg0.getDep() + " ^" + mapParam.get(arg0.getDep()) + " ^" + arg0.getArr() + " ^" + mapParam.get(arg0.getArr()) + " ^" + depStr[2] + " ^" + depStr[1] + "/" + depStr[0] + " ^" + arrStr[2] + " ^" + arrStr[1] + "/" + arrStr[0] +" ^1 ^0 ^0 ^Y ^NC ^false ^ ^Economy Class ^Non-Stop and Connecting ^BKG ^TZ ^false ^";
 			NameValuePair[] names = {

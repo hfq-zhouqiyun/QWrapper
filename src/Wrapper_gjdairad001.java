@@ -89,8 +89,8 @@ public class Wrapper_gjdairad001 implements QunarCrawler{
 		
 		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$DropDownListMarketDay1",dateStr[2]);
 		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$DropDownListMarketMonth1",dateStr[0] + "-" + dateStr[1]);
-		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$TextBoxMarketDestination1",arg0.getDep());
-		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$TextBoxMarketOrigin1",arg0.getArr());
+		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$TextBoxMarketDestination1",arg0.getArr());
+		map.put("ControlGroupSearchView2$AvailabilitySearchInputSearchView2$TextBoxMarketOrigin1",arg0.getDep());
 		
 		map.put("__EVENTTARGET","ControlGroupSearchView2$LinkButtonSubmit");
 		map.put("_authkey_","null");

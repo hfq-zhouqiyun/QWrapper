@@ -172,6 +172,9 @@ public class Wrapper_gjdairla001 implements QunarCrawler{
 				
 				String tmpPrice = getPrice(jsonStr[j]);
 				taxStr = StringUtils.substringBetween(jsonStr[j], "Array($H({CO:$H({", "aplicacion:'FARE'})})))");
+				if (taxStr==null){
+					taxStr = StringUtils.substringBetween(jsonStr[j], "Array($H({DG:$H({", "aplicacion:'FARE'})})))");
+				}
 				String[] taxmono = StringUtils.substringsBetween(taxStr, "monto:", " ,");
 				String[] taxporcentaje = StringUtils.substringsBetween(taxStr, "porcentaje:", ",");
 				
